@@ -1,0 +1,5 @@
+0. Opusc pantograf
+1. Podnies pantograf
+2. Jedz
+3. Stoj
+
