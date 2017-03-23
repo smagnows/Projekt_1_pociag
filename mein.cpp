@@ -31,6 +31,14 @@ int dzialaj(void){
 		std::cin >> opcja;
 		puts("STAN: \t");
 		switch (opcja){
+			case -1: {
+				if(muj->czyDziala()==0) return 0;
+				else
+				{
+					puts("Najpierw wylacz pociag!!");
+				}
+			}
+			break;
 			case 0: muj->Wylacz();
 			break;
 			case 1: muj->niechDziala();

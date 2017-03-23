@@ -9,6 +9,7 @@ class jedziePociag{
 	int dziala=0;
 	public:
 	jedziePociag() {dziala=1;}
+	int czyDziala() {return dziala==1?1:0;}
 	//~jedziePociag() { dziala=0;}
 	void niechDziala() 
 	{
