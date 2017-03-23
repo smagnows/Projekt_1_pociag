@@ -14,6 +14,7 @@ int dodajPasazera(struct pasazer *po, struct pasazer *next){
 	next->poprz = po;
 	next->nast = NULL;
 	po->nast = next;
+	return 0;
 }//dodajPasazera()
 int wypiszPasazerow(struct pasazer *pierwszy)
 {
