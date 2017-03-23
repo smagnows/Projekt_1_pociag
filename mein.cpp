@@ -1,28 +1,35 @@
 #include <iostream>
 #include <fstream>
 #include "mein.h"
+//#include "klasy.h"
 
 //using namespace std;
-
+int obslugaPasazerow(void);
 void welcome(void){
 	puts("Witamy w pociagu Alstom Pendolino!\n");
 }
-/*void wypiszMenu() {
-	ifstream menu;
+void wypiszMenu() {
+	std::ifstream menu;
 	menu.open("menu.txt");
-	string napis;
+	std::string napis;
 	while (!menu.eof()) {
-		getline(menu, napis);
-		cout << napis << endl;
+		std::getline(menu, napis);
+		std::cout << napis << std::endl;
 	}
-}*/
+}
+void wstepPasazerow(void){
+	obslugaPasazerow();
+
+}
 int dzialaj(void){
 	jedziePociag* muj = new jedziePociag;
 	int opcja;
 	puts("Pantograf podniesiony");
 	while(1) {
-//		wypiszMenu();
+		puts("\n");
+		wypiszMenu();
 		std::cin >> opcja;
+		puts("STAN: \t");
 		switch (opcja){
 			case 0: muj->Wylacz();
 			break;
@@ -32,8 +39,10 @@ int dzialaj(void){
 			break;
 			case 3: muj->Stuj();
 			break;
+			case 4: wstepPasazerow();
+			break;
 		}
-	opcja=NULL;
+	//opcja=(int)NULL;
 
 	}
 	

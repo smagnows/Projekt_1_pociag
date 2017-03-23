@@ -2,4 +2,5 @@
 1. Podnies pantograf
 2. Jedz
 3. Stoj
+4. Obsluga pasazerow
 

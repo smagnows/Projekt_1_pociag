@@ -10,9 +10,22 @@ class jedziePociag{
 	public:
 	jedziePociag() {dziala=1;}
 	//~jedziePociag() { dziala=0;}
-	void niechDziala() { if(!dziala)dziala=1; }
+	void niechDziala() 
+	{
+		if(!dziala){
+			dziala=1;
+			puts("Wlaczony Alstom");
+		}
+		else
+		{
+			puts("Juz wlaczony");
+		}
+	}//niechDziala()
 	void Jedz(){
-		if(!dziala) return;
+		if(!dziala){
+			puts("Nie dziala cos");
+			return;
+		}
 		else {
 			if(pociag==stoi) {
 				puts("Pociag jedzie");
@@ -22,7 +35,10 @@ class jedziePociag{
 		}
 	}
 	void Stuj(){
-		if(!dziala) return;
+		if(!dziala){
+			puts("Nie dziala cos");
+			return;
+		}
 		else {
 			if(pociag==jedzie) {
 				puts("Pociag stoi");
@@ -31,7 +47,17 @@ class jedziePociag{
 			else puts("juz stoi");
 		}
 	}
-	void Wylacz() {~jedziePociag(); }
+	void Wylacz() {
+		if(pociag==stoi)
+		{
+			dziala=0;
+			puts("Wylaczony");
+		}
+		else
+		{
+			puts("Pociag jedzie. Najpierw zatrzymaj pociag");
+		}
+	};
 
 };
 
