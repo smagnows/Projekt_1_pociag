@@ -9,22 +9,29 @@ class jedziePociag{
 	int dziala=0;
 	public:
 	jedziePociag() {dziala=1;}
+	//~jedziePociag() { dziala=0;}
 	void niechDziala() { if(!dziala)dziala=1; }
 	void Jedz(){
 		if(!dziala) return;
 		else {
-			if(pociag==stoi) pociag=jedzie;
+			if(pociag==stoi) {
+				puts("Pociag jedzie");
+				pociag=jedzie;
+			}
 			else puts("Juz jedzie");
 		}
 	}
 	void Stuj(){
 		if(!dziala) return;
 		else {
-			if(pociag==jedzie) pociag=stoi;
+			if(pociag==jedzie) {
+				puts("Pociag stoi");
+				pociag=stoi;
+			}
 			else puts("juz stoi");
 		}
 	}
-	void Wylacz() { dziala=0; }
+	void Wylacz() {~jedziePociag(); }
 
 };
 

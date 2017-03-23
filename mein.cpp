@@ -33,7 +33,7 @@ int dzialaj(void){
 			case 3: muj->Stuj();
 			break;
 		}
-	opcja=100;
+	opcja=NULL;
 
 	}
 	
